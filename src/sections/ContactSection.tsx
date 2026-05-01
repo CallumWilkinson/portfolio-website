@@ -11,7 +11,7 @@ interface ContactSectionProps {
 }
 
 function ContactSection({ title, summary, links }: ContactSectionProps) {
-  const rows = [1, 2, 3].map((row) =>
+  const rows = [1, 2, 3, 4].map((row) =>
     links.filter((link) => (link.row ?? 1) === row),
   )
 
@@ -42,10 +42,30 @@ function ContactSection({ title, summary, links }: ContactSectionProps) {
                   return null
                 }
 
+                if (index === 3) {
+                  const contactLine = rowLinks.map((link) => link.label).join(' | ')
+
+                  return (
+                    <Typography
+                      color="text.secondary"
+                      key={index}
+                      sx={{ fontSize: '0.95rem' }}
+                    >
+                      {contactLine}
+                    </Typography>
+                  )
+                }
+
                 return (
                   <Box
                     key={index}
-                    sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}
+                    sx={{
+                      alignItems: 'center',
+                      display: 'flex',
+                      flexDirection: 'row',
+                      flexWrap: 'wrap',
+                      gap: 1.5,
+                    }}
                   >
                     {rowLinks.map((link) => (
                       <ContactLinkButton
