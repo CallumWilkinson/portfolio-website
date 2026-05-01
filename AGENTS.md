@@ -1,165 +1,333 @@
 # AGENTS.md
 
-## Project purpose
+## Project context
 
 This repository is a portfolio website for Callum.
 
-The goal is to ship a clean, interview-ready website that clearly presents real software projects, live demos, GitHub links, screenshots, and short explanations of engineering decisions.
+The goal is to quickly build and polish an interview-ready portfolio that shows:
 
-Prioritize clarity, speed, and polish over complexity.
+- Software projects
+- Live demos
+- GitHub repositories
+- Screenshots or visual previews
+- Short explanations of engineering decisions
+- Contact links
 
-## Product priorities
+This project is deliberately scoped as a small, polished frontend website. It is not intended to be a complex application.
 
-Build the smallest version that creates a strong impression in an interview.
+The main problem this project solves is giving interviewers one clean place to see what Callum has built, how he thinks about software, and where they can inspect or demo his work.
 
-Required sections:
+## Current project priorities
 
-1. Hero section
-2. Projects section
-3. About section
-4. Contact section
+Prioritize in this order:
 
-The Projects section is the most important part of the site.
+1. Ship a working portfolio quickly
+2. Make the projects section clear and convincing
+3. Keep the code readable and maintainable
+4. Keep the layout clean on desktop and mobile
+5. Avoid overengineering
 
-Each project should show:
+Do not optimize for perfect architecture, exhaustive test coverage, animation polish, or unnecessary features before the core portfolio works.
 
-- Project name
-- Short description
-- Tech stack
-- GitHub link
-- Live demo link if available
-- Screenshot or visual preview if available
-- Brief note on the engineering value of the project
+## Tech stack
 
-## Preferred stack
+Use the existing project stack.
 
-Follow the existing repository setup.
-
-If this repository is a Vite React TypeScript project, use:
+For this project, assume the preferred stack is:
 
 - React
 - TypeScript
 - Vite
 - Material UI
 - ES modules
+- Static project data stored in local files
 
-Do not introduce a backend, database, CMS, authentication, routing system, or complex state management unless explicitly requested.
+Use TypeScript for React components in this project.
 
-Use simple local data files for portfolio content, such as:
+Use PowerShell command syntax whenever suggesting terminal commands.
 
-- `src/data/projects.ts`
-- `src/components/ProjectCard.tsx`
-- `src/sections/HeroSection.tsx`
-- `src/sections/ProjectsSection.tsx`
-- `src/sections/AboutSection.tsx`
-- `src/sections/ContactSection.tsx`
-
-## Development workflow
-
-Before changing code:
-
-1. Inspect the existing file structure.
-2. Identify the smallest safe change.
-3. Preserve existing working code.
-4. Avoid large rewrites unless the current structure is clearly blocking progress.
-5. Make one logical change at a time.
-
-After changing code:
-
-1. Run the relevant checks.
-2. Fix TypeScript errors.
-3. Fix obvious runtime errors.
-4. Make sure the app still builds.
-5. Summarize what changed and why.
-
-Use PowerShell command syntax when showing commands.
-
-Example commands:
+Example:
 
 ```powershell
 npm install
 npm run dev
 npm run build
-npm test
 ```
 
-## Coding style
+Do not use Bash commands.
+
+## Scope boundaries
+
+This project should stay simple.
+
+Do not add these unless explicitly requested:
+
+- Backend API
+- Database
+- Authentication
+- CMS
+- Complex routing
+- Global state library
+- Animation library
+- Unit test setup
+- Integration test setup
+- End-to-end test setup
+- Large design system
+- Blog engine
+
+A one-page portfolio is enough if it clearly presents the projects.
+
+## Required website sections
+
+The site should include at minium:
+
+1. Hero section
+2. Projects section
+3. About section
+4. Contact section
+
+The Projects section is the most important section.
+
+Each project card should include:
+
+- Project title
+- Short description
+- Tech stack
+- GitHub link
+- Live demo link, if available
+- Screenshot or image, if available
+- Short engineering notes explaining what the project demonstrates
+
+Keep project descriptions honest, specific, and easy to scan.
+
+## Suggested file structure
+
+Prefer a simple structure like this:
+
+```text
+src/
+  assets/
+  components/
+  data/
+  sections/
+  App.tsx
+  main.tsx
+```
+
+Suggested responsibilities:
+
+- `components/` contains reusable UI components
+- `sections/` contains page-level sections
+- `data/` contains portfolio project data
+- `assets/` contains screenshots and images
+
+Avoid placing large arrays of portfolio data directly inside JSX components.
+
+## Development workflow
+
+Before changing code:
+
+1. Inspect the existing repository structure.
+2. Read the relevant files before editing.
+3. Identify the smallest useful change.
+4. Explain the intended change briefly if the task is not trivial.
+5. Preserve existing working code.
+6. Avoid large rewrites unless the current structure clearly blocks progress.
+
+While changing code:
+
+1. Make one logical change at a time.
+2. Keep added or changed files limited where possible.
+3. Avoid unrelated cleanup.
+4. Avoid changing naming conventions unless there is a clear reason.
+5. Keep the site working after each change.
+6. Prefer practical progress over theoretical perfection.
+
+After changing code:
+
+1. Run the relevant local check, usually:
+
+```powershell
+npm run build
+```
+
+2. Fix TypeScript errors.
+3. Fix obvious runtime errors.
+4. Summarize what changed.
+5. Provide a short proposed commit message.
+6. Pause for review.
+
+Do not continue to the next major task until Callum has reviewed the result or explicitly says to continue.
+
+## Review loop
+
+Work in a back-and-forth review loop.
+
+After each logical change, output:
+
+1. Files changed
+2. What changed
+3. Why it changed
+4. Any trade-offs or assumptions
+5. Suggested commit message
+6. Suggested files to stage, if relevant
+7. Anything Callum should manually check
+
+Then stop and wait for feedback.
+
+Do not push ahead through multiple unrelated changes without review.
+
+If Callum gives feedback, revise the current solution before starting a new task.
+
+## Git workflow
+
+Never commit code.
+
+Never run:
+
+```powershell
+git commit
+git push
+```
+
+Callum will handle commits manually.
+
+You may suggest commands like:
+
+```powershell
+git add src/components/ProjectCard.tsx
+```
+
+Only stage files automatically if Callum explicitly asks you to stage them.
+
+Always provide a short, copy-pasteable Conventional Commit message after each logical change.
+
+Prefer small commit messages.
+
+Use this format:
+
+```text
+feat: add project card component
+```
+
+Use a body only if the change needs explanation.
+
+Commit types:
+
+- `feat:` for new features
+- `fix:` for bug fixes
+- `refactor:` for code reorganization without behaviour changes
+- `docs:` for documentation updates
+- `chore:` for setup or config changes
+- `style:` for visual-only changes
+
+Each proposed commit should represent one logical change.
+
+Do not bundle unrelated changes into one commit.
+
+Each commit should leave the codebase in a working state.
+
+## Commit boundary expectations
+
+After suggesting a commit message, explain briefly why the change belongs in one commit.
+
+If the work should be split, suggest the split.
+
+Good commit boundary examples:
+
+- One commit for adding the project data model
+- One commit for adding the project card component
+- One commit for wiring the project section into the homepage
+- One commit for visual polish
+- One commit for documentation updates
+
+Avoid giant commits that mix content, styling, refactoring, and dependency changes.
+
+## Testing decision for this project
+
+Do not write unit tests or integration tests for this portfolio website unless Callum explicitly asks for them.
+
+This is intentional.
+
+For this project, the priority is speed, polish, and interview readiness.
+
+However, the code must still be written in a testable state.
+
+That means:
+
+- Keep components small and focused
+- Keep project data separate from UI components
+- Use explicit props
+- Avoid hidden side effects
+- Avoid global state where possible
+- Move formatting or transformation logic into standalone functions
+- Keep conditional rendering simple
+- Avoid large all-in-one components
+- Avoid tightly coupling components to browser APIs
+- Prefer deterministic functions where practical
+
+Do not add test libraries, test files, mocks, fixtures, or test scaffolding unless explicitly requested.
+
+A good outcome is code that ships quickly now but could have tests added later without a major refactor.
+
+## Clean code principles
 
 Write code for humans first.
 
 Use:
 
-- Clear names
-- Small functions
+- Descriptive names
 - Small components
-- Early returns
+- Small functions
+- Clear file responsibilities
 - Explicit control flow
+- Guard clauses and early returns
 - Constants instead of magic strings or numbers
-- ES module imports and exports
+- Consistent formatting
+- Simple data shapes
+- Clear seams between data, layout, and presentation
 
 Avoid:
 
 - Ternary operators
 - Clever one-liners
-- Unnecessary abstractions
 - Deeply nested logic
+- Vague names like `data`, `temp`, `foo`, or `x`
+- Copy-pasted logic
+- Unnecessary abstraction
+- Mixed concerns
+- Hidden dependencies
 - CommonJS syntax
 - Silent error handling
-- Large all-in-one components
-- Rewriting unrelated files
+- Large files that do too many things
 
 Prefer this:
 
-```ts
+```tsx
 if (project.liveDemoUrl === undefined) {
   return null;
 }
+
+return <Button href={project.liveDemoUrl}>Live Demo</Button>;
 ```
 
 Avoid this:
 
-```ts
-return project.liveDemoUrl ? <Button /> : null;
+```tsx
+return project.liveDemoUrl ? (
+  <Button href={project.liveDemoUrl}>Live Demo</Button>
+) : null;
 ```
 
-## React guidelines
+## React and TypeScript guidelines
 
 Use functional React components.
 
 Keep components focused on one job.
 
-Prefer this structure:
+Prefer simple props and simple types.
 
-- Page or app-level layout component
-- Section components
-- Reusable card components
-- Data stored separately from UI components
-
-Use descriptive prop names.
-
-Avoid putting large arrays of project data directly inside JSX components.
-
-Prefer mapping over project data:
-
-```tsx
-{
-  projects.map((project) => <ProjectCard key={project.id} project={project} />);
-}
-```
-
-Use Material UI components where they make the layout faster and cleaner.
-
-Prefer simple, readable `sx` styling over complex custom CSS.
-
-Do not add animation libraries unless explicitly requested.
-
-## TypeScript guidelines
-
-If the repository uses TypeScript, keep types simple and explicit.
-
-Use interfaces or type aliases for shared data shapes.
-
-Example:
+Example project type:
 
 ```ts
 export interface PortfolioProject {
@@ -174,59 +342,31 @@ export interface PortfolioProject {
 }
 ```
 
-Do not over-model the domain.
+Prefer mapping over local project data:
 
-This is a portfolio website, not an enterprise application.
-
-## Testing guidelines
-
-For this portfolio website, do not write unit tests or integration tests unless explicitly requested.
-
-The priority for this project is speed, polish, and getting the site interview-ready.
-
-However, still write code that would be easy to test later.
-
-To keep the code testable:
-
-- Keep components small and focused
-- Keep project data separate from UI components
-- Move formatting or transformation logic into standalone functions
-- Avoid tightly coupling components to browser APIs
-- Avoid hidden side effects
-- Use explicit props instead of reaching into global state
-- Keep conditional rendering simple and readable
-- Avoid large all-in-one components
-
-Do not add test libraries, test setup, test files, mocks, or integration test scaffolding unless explicitly requested.
-
-A good outcome is code that ships quickly now but could have tests added later without needing a major refactor.
-
-## Git guidelines
-
-Use Conventional Commits when suggesting commit messages.
-
-Examples:
-
-```text
-feat: add project card component
-feat: add portfolio project data
-fix: correct broken demo link
-refactor: split homepage into sections
-test: add project formatting tests
-docs: update portfolio content
+```tsx
+{
+  projects.map((project) => <ProjectCard key={project.id} project={project} />);
+}
 ```
 
-Do not commit automatically unless explicitly asked.
+Use Material UI where it helps build quickly and consistently.
 
-## Portfolio content guidance
+Prefer readable `sx` styling over large custom CSS files.
 
-Use honest, concrete project descriptions.
+Avoid complex theme architecture unless explicitly requested.
+
+Keep styling simple, responsive, and easy to adjust.
+
+## Data and content guidelines
+
+Portfolio content should be honest and concrete.
 
 Emphasize:
 
 - Real project goals
+- Real technologies used
 - Architecture decisions
-- Testing
 - Debugging
 - Trade-offs
 - Maintainability
@@ -235,13 +375,14 @@ Emphasize:
 
 Avoid:
 
-- Overhyped language
 - Fake metrics
-- Claims that are not supported by the project
+- Exaggerated claims
+- Vague descriptions
+- Overly polished corporate language
 - Long paragraphs
-- Vague descriptions like “modern web app”
+- Placeholder content
 
-Good project description style:
+Good description style:
 
 ```text
 A full-stack auction house analysis app that ingests World of Warcraft commodity auction data and exposes searchable item pricing through a React frontend and .NET API.
@@ -250,45 +391,177 @@ A full-stack auction house analysis app that ingests World of Warcraft commodity
 Good engineering note style:
 
 ```text
-Uses separate read and write paths so search queries can stay fast while ingestion logic remains isolated.
+Separates ingestion, persistence, and read models so search remains simple while the data collection logic stays isolated.
 ```
 
-## Interview-readiness checklist
+## Commenting rules
 
-Before considering the task finished, verify:
+Only write comments when the reason, intent, or assumption is not obvious from the code.
 
-- The site loads locally.
-- The production build succeeds.
-- The layout works on desktop and mobile.
-- Project cards are readable.
-- GitHub links work.
-- Demo links work or are clearly omitted.
-- There is no placeholder text.
-- There are no obvious console errors.
-- The strongest projects are shown first.
-- The website can be explained in under 60 seconds.
+Do not comment what the code is doing.
 
-## What not to do
+Prefer clearer names and smaller functions over explanatory comments.
 
-Do not spend time on:
+Use comments for:
 
-- Blog support
-- CMS setup
-- Backend APIs
-- Authentication
-- Complex routing
-- Heavy animations
-- Perfect design systems
-- Theme architecture
-- Premature test coverage for static layout
-- Large rewrites
+- Non-obvious decisions
+- Assumptions
+- Edge cases
+- Workarounds
+- Gotchas
+- Future review notes
 
-The priority is to ship a clean, useful, interview-ready portfolio.
+Use these tags responsibly:
 
-## When uncertain
+```ts
+// TODO: Add resume download link after the PDF is finalized.
+// FIXME: Replace temporary project screenshot before deployment.
+// HACK: Keeps card heights consistent until final images are cropped.
+```
 
-If a decision affects architecture, dependencies, deployment, or public-facing content, ask before proceeding.
+Do not write comments that may quickly become false.
 
-If the decision is small and reversible, make the simplest reasonable choice and document it in the summary.
+Delete outdated comments.
 
-Prefer practical progress over perfection.
+Do not add AI-generated signature comments.
+
+Do not add:
+
+```text
+Generated with Claude Code
+Co-Authored-By: Claude
+```
+
+## Error handling and debugging
+
+Handle errors explicitly when they exist.
+
+For this static portfolio, most errors will be broken links, missing data, missing images, or build errors.
+
+Prefer:
+
+- Clear fallback UI
+- Guard clauses
+- Defensive checks around optional fields
+- Helpful local variable names
+- Simple debugging steps
+
+Do not silently swallow problems.
+
+If something seems structurally wrong, flag it instead of working around it.
+
+## Refactoring expectations
+
+Refactor only with a clear purpose.
+
+Do not move code just to tidy it up.
+
+If code is unclear:
+
+1. Identify the issue.
+2. Explain why it may be a problem.
+3. Suggest a small fix.
+4. Wait for review if the change is not clearly necessary.
+
+If you find old or questionable code, do not delete it unless it is clearly unused and safe to remove.
+
+If unsure, flag it for review.
+
+Use `// legacy:` comments only when needed to mark old code that should not be removed yet.
+
+Always question design flaws and assumptions.
+
+Do not blindly follow a poor structure if a small improvement would make the code clearer.
+
+## Large task handling
+
+If a task is too large to safely complete in one pass, split it into smaller steps.
+
+Use this format:
+
+```text
+This task is too large to do safely in one pass. I recommend splitting it into:
+
+1. Step one
+2. Step two
+3. Step three
+```
+
+Then complete only the first useful step and pause for review.
+
+Do not silently truncate work.
+
+Do not pretend that a large task is fully complete if only part of it was handled.
+
+At the end of a multi-step task, summarize what was completed and what remains.
+
+## Design principles
+
+The site should feel:
+
+- Clean
+- Simple
+- Professional
+- Fast to scan
+- Honest
+- Developer-focused
+
+Avoid making it look like a generic template.
+
+The content should sound like a real developer explaining real work.
+
+Prefer strong project cards over decorative design.
+
+## Interview readiness checklist
+
+Before considering the project ready, verify:
+
+- The site loads locally
+- The production build succeeds
+- The layout works on desktop
+- The layout works on mobile
+- Project cards are readable
+- Strongest projects appear first
+- GitHub links work
+- Demo links work or are omitted
+- Screenshots load correctly
+- There is no placeholder text
+- Contact links work
+- There are no obvious console errors
+- The site can be explained in under 60 seconds
+
+## Final response format after a code change
+
+After making a code change, respond with:
+
+```text
+Files changed:
+- path/to/file
+
+What changed:
+- ...
+
+Why:
+- ...
+
+Checks:
+- npm run build passed
+```
+
+Then include:
+
+```text
+Suggested commit message:
+feat: add portfolio hero section
+```
+
+Then include:
+
+```text
+Commit boundary:
+This should be one commit because ...
+```
+
+Then pause for Callum's review.
+
+Do not keep making changes after this unless Callum says to continue.
