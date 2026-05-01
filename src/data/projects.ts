@@ -16,6 +16,8 @@ export const projects: PortfolioProject[] = [
       "Blizzard API",
     ],
     githubUrl: "https://github.com/CallumWilkinson/wow-paper-trader",
+    imageUrl: "/images/Wow-app.png",
+    imageAlt: "Wow app demo image",
     engineeringNotes: [
       "Built with .NET 10 and ASP.NET Core, using a layered architecture that separates API controllers, application logic, persistence, and external API integrations.",
       "Implements CQRS-style boundaries by separating write-side ingestion workflows from read-side query services.",
