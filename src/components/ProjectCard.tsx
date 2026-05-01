@@ -40,6 +40,41 @@ function renderFormattedText(text: string) {
 function ProjectCard({ project }: ProjectCardProps) {
   let imageContent: ReactNode = null;
   if (project.imageUrl !== undefined) {
+    const imageElement = (
+      <Box
+        alt={project.imageAlt}
+        component="img"
+        src={project.imageUrl}
+        sx={{
+          backgroundColor: "#f4f7f6",
+          border: "1px solid",
+          borderColor: "divider",
+          borderRadius: 3,
+          display: "block",
+          maxHeight: 220,
+          objectFit: "cover",
+          objectPosition: "top",
+          width: "100%",
+        }}
+      />
+    );
+
+    let linkedImageContent = imageElement;
+
+    if (project.liveDemoUrl !== undefined) {
+      linkedImageContent = (
+        <Box
+          component="a"
+          href={project.liveDemoUrl}
+          rel="noreferrer"
+          sx={{ display: "block" }}
+          target="_blank"
+        >
+          {imageElement}
+        </Box>
+      );
+    }
+
     imageContent = (
       <Box
         sx={{
@@ -50,22 +85,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           pt: { xs: 2, md: 3 },
         }}
       >
-        <Box
-          alt={project.imageAlt}
-          component="img"
-          src={project.imageUrl}
-          sx={{
-            backgroundColor: "#f4f7f6",
-            border: "1px solid",
-            borderColor: "divider",
-            borderRadius: 3,
-            display: "block",
-            maxHeight: 220,
-            objectFit: "cover",
-            objectPosition: "top",
-            width: "100%",
-          }}
-        />
+        {linkedImageContent}
       </Box>
     );
   }
