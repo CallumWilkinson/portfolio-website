@@ -1,28 +1,28 @@
-import { Box, Container, Stack, Typography } from '@mui/material'
+import { Box, Container, Stack, Typography } from "@mui/material";
 
-import ContactLinkButton from '../components/ContactLinkButton'
-import SectionHeading from '../components/SectionHeading'
-import type { ContactLink } from '../types/portfolio'
+import ContactLinkButton from "../components/ContactLinkButton";
+import SectionHeading from "../components/SectionHeading";
+import type { ContactLink } from "../types/portfolio";
 
 interface ContactSectionProps {
-  title: string
-  summary: string
-  links: ContactLink[]
+  title: string;
+  summary: string;
+  links: ContactLink[];
 }
 
 function ContactSection({ title, summary, links }: ContactSectionProps) {
   const rows = [1, 2, 3, 4].map((row) =>
     links.filter((link) => (link.row ?? 1) === row),
-  )
+  );
 
   return (
     <Box component="section" id="contact" sx={{ py: { xs: 8, md: 11 } }}>
       <Container maxWidth="lg">
         <Box
           sx={{
-            backgroundColor: 'background.paper',
-            border: '1px solid',
-            borderColor: 'divider',
+            backgroundColor: "background.paper",
+            border: "1px solid",
+            borderColor: "divider",
             borderRadius: 5,
             p: { xs: 3, md: 5 },
           }}
@@ -31,7 +31,7 @@ function ContactSection({ title, summary, links }: ContactSectionProps) {
           <Stack spacing={3}>
             <Typography
               color="text.secondary"
-              sx={{ fontSize: { xs: '1rem', md: '1.05rem' }, maxWidth: 760 }}
+              sx={{ fontSize: { xs: "1rem", md: "1.05rem" }, maxWidth: 760 }}
             >
               {summary}
             </Typography>
@@ -39,31 +39,33 @@ function ContactSection({ title, summary, links }: ContactSectionProps) {
             <Stack spacing={1.5}>
               {rows.map((rowLinks, index) => {
                 if (rowLinks.length === 0) {
-                  return null
+                  return null;
                 }
 
                 if (index === 3) {
-                  const contactLine = rowLinks.map((link) => link.label).join(' | ')
+                  const contactLine = rowLinks
+                    .map((link) => link.label)
+                    .join(" | ");
 
                   return (
                     <Typography
                       color="text.secondary"
                       key={index}
-                      sx={{ fontSize: '0.95rem' }}
+                      sx={{ fontSize: "0.95rem" }}
                     >
                       {contactLine}
                     </Typography>
-                  )
+                  );
                 }
 
                 return (
                   <Box
                     key={index}
                     sx={{
-                      alignItems: 'center',
-                      display: 'flex',
-                      flexDirection: 'row',
-                      flexWrap: 'wrap',
+                      alignItems: "center",
+                      display: "flex",
+                      flexDirection: "row",
+                      flexWrap: "wrap",
                       gap: 1.5,
                     }}
                   >
@@ -77,14 +79,14 @@ function ContactSection({ title, summary, links }: ContactSectionProps) {
                       />
                     ))}
                   </Box>
-                )
+                );
               })}
             </Stack>
           </Stack>
         </Box>
       </Container>
     </Box>
-  )
+  );
 }
 
-export default ContactSection
+export default ContactSection;
