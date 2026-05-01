@@ -51,9 +51,11 @@ function ProjectCard({ project }: ProjectCardProps) {
           borderColor: "divider",
           borderRadius: 3,
           display: "block",
+          filter: "saturate(1)",
           maxHeight: 220,
           objectFit: "cover",
           objectPosition: "top",
+          transition: "transform 0.25s ease, filter 0.25s ease",
           width: "100%",
         }}
       />
@@ -67,7 +69,30 @@ function ProjectCard({ project }: ProjectCardProps) {
           component="a"
           href={project.liveDemoUrl}
           rel="noreferrer"
-          sx={{ display: "block" }}
+          sx={{
+            borderRadius: 3,
+            display: "block",
+            outline: "2px solid transparent",
+            outlineOffset: 4,
+            overflow: "hidden",
+            transition: "box-shadow 0.25s ease, outline-color 0.25s ease",
+            "&:hover": {
+              boxShadow: "0 0 0 3px rgba(15, 108, 91, 0.16)",
+              outlineColor: "rgba(15, 108, 91, 0.32)",
+              "& img": {
+                filter: "saturate(1.08)",
+                transform: "scale(1.02)",
+              },
+            },
+            "&:focus-visible": {
+              boxShadow: "0 0 0 3px rgba(15, 108, 91, 0.2)",
+              outlineColor: "rgba(15, 108, 91, 0.4)",
+              "& img": {
+                filter: "saturate(1.08)",
+                transform: "scale(1.02)",
+              },
+            },
+          }}
           target="_blank"
         >
           {imageElement}

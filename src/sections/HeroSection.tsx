@@ -124,12 +124,12 @@ function HeroSection({
                     outlineOffset: 4,
                     transition: 'box-shadow 0.2s ease, outline-color 0.2s ease',
                     '&:hover': {
-                      boxShadow: '0 0 0 3px rgba(15, 108, 91, 0.12)',
-                      outlineColor: 'rgba(15, 108, 91, 0.22)',
+                      boxShadow: '0 0 0 3px rgba(15, 108, 91, 0.18)',
+                      outlineColor: 'rgba(15, 108, 91, 0.34)',
                     },
                     '&:focus-visible': {
-                      boxShadow: '0 0 0 3px rgba(15, 108, 91, 0.16)',
-                      outlineColor: 'rgba(15, 108, 91, 0.3)',
+                      boxShadow: '0 0 0 3px rgba(15, 108, 91, 0.22)',
+                      outlineColor: 'rgba(15, 108, 91, 0.42)',
                     },
                   }}
                   target="_blank"
