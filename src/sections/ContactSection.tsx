@@ -1,0 +1,52 @@
+import { Box, Container, Stack, Typography } from '@mui/material'
+
+import ContactLinkButton from '../components/ContactLinkButton'
+import SectionHeading from '../components/SectionHeading'
+import type { ContactLink } from '../types/portfolio'
+
+interface ContactSectionProps {
+  title: string
+  summary: string
+  links: ContactLink[]
+}
+
+function ContactSection({ title, summary, links }: ContactSectionProps) {
+  return (
+    <Box component="section" id="contact" sx={{ py: { xs: 8, md: 11 } }}>
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            backgroundColor: 'background.paper',
+            border: '1px solid',
+            borderColor: 'divider',
+            borderRadius: 5,
+            p: { xs: 3, md: 5 },
+          }}
+        >
+          <SectionHeading eyebrow="Next Step" title={title} />
+          <Stack spacing={3}>
+            <Typography
+              color="text.secondary"
+              sx={{ fontSize: { xs: '1rem', md: '1.05rem' }, maxWidth: 760 }}
+            >
+              {summary}
+            </Typography>
+
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
+              {links.map((link) => (
+                <ContactLinkButton
+                  href={link.href}
+                  key={link.id}
+                  label={link.label}
+                  variant={link.variant}
+                />
+              ))}
+            </Box>
+          </Stack>
+        </Box>
+      </Container>
+    </Box>
+  )
+}
+
+export default ContactSection
