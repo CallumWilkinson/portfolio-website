@@ -4,7 +4,7 @@ export const profile: ProfileContent = {
   name: "Callum Wilkinson",
   headline: "Software developer building practical full-stack projects.",
   summary:
-    "I build quality software that solves clear problems, from multiplayer games to data tools and internal business apps. This portfolio highlights projects I have designed, built, debugged, and improved, with a focus on readable code and practical engineering decisions.",
+    "I build practical software using TypeScript, JavaScript, React, and C#, including multiplayer games, data tools, and internal business apps. I focus on clean architecture, readable code, and continuous improvement through testing and iteration.",
   location: "Melbourne, VIC",
   githubUrl: "https://github.com/CallumWilkinson",
   avatarUrl: "https://avatars.githubusercontent.com/u/84135636?v=4",
@@ -19,7 +19,7 @@ export const profile: ProfileContent = {
     "AI with Quality",
   ],
   projectsIntro:
-    "These are the projects that best show how I think about architecture, practical delivery, and maintainable code.",
+    "These projects reflect how I approach building software that is clear, maintainable, and useful.",
   aboutTitle: "About",
   aboutParagraphs: [
     "Most of my recent work sits around JavaScript, TypeScript, and C#, with a bias toward explicit control flow, small units of code, and solutions that stay understandable under change.",
