@@ -5,7 +5,7 @@ export const projects: PortfolioProject[] = [
     id: 'wow-paper-trader',
     title: 'WowPaperTrader',
     description:
-      'A .NET 10 app that ingests World of Warcraft commodity auction data from Blizzard, stores snapshots in SQL Server, and exposes search and pricing endpoints for item lookups.',
+      'A .NET 10 application that ingests World of Warcraft commodity auction data from the Blizzard API, stores hourly snapshots in SQL Server, and exposes fast, query-optimised endpoints for item search and pricing.',
     techStack: [
       '.NET 10',
       'ASP.NET Core',
@@ -17,9 +17,9 @@ export const projects: PortfolioProject[] = [
     ],
     githubUrl: 'https://github.com/CallumWilkinson/wow-paper-trader',
     engineeringNotes: [
-      'Separates write-side ingestion from query-side read services so the API can return simple read models while imports stay isolated.',
-      'Uses EF Core for transactional snapshot writes and Dapper for read paths shaped around API responses.',
-      'Runs auction ingestion in a worker service and keeps command/query boundaries explicit across the application layer.',
+      'Implements a clear separation between write-side ingestion and read-side query services using CQRS principles.',
+      'Uses EF Core for transactional snapshot writes and Dapper for high-performance, read-optimised queries.',
+      'Runs ingestion as a background worker service while keeping command and query boundaries explicit in the application layer.',
     ],
     featured: true,
   },
@@ -27,7 +27,7 @@ export const projects: PortfolioProject[] = [
     id: 'chess-cs50-v2',
     title: 'Multiplayer Chess Platform',
     description:
-      'A server-authoritative online chess game built in vanilla JavaScript, with lobby management, WebSocket state sync, and a pure chess domain kept separate from the networking layer.',
+      'A server-authoritative online chess platform built in vanilla JavaScript, featuring lobby management, WebSocket state synchronisation, and a clean separation between game logic and networking.',
     techStack: [
       'Vanilla JavaScript',
       'Node.js',
@@ -42,9 +42,9 @@ export const projects: PortfolioProject[] = [
       'https://raw.githubusercontent.com/CallumWilkinson/Chess_CS50_v2/server-side-refactor/architecture.png',
     imageAlt: 'Architecture diagram for the multiplayer chess platform',
     engineeringNotes: [
-      'Keeps chess rules in framework-agnostic modules so move validation can be tested without socket or DOM code.',
-      'Uses a server-authoritative Socket.IO flow so clients do not own the canonical game state.',
-      'Separates lobby and session orchestration from piece movement logic so the real-time layer can be reused for other turn-based games.',
+      'Encapsulates chess rules in framework-agnostic modules so core logic can be tested independently of sockets or the DOM.',
+      'Implements a server-authoritative architecture to ensure a single source of truth for game state.',
+      'Separates lobby/session orchestration from gameplay logic, allowing the real-time layer to be reused for other turn-based games.',
     ],
     featured: true,
   },
@@ -52,27 +52,28 @@ export const projects: PortfolioProject[] = [
     id: 'foam-calculator',
     title: 'Foam Calculator',
     description:
-      'An internal quoting tool built for Clark Rubber that looks up foam pricing and SKU data, then calculates customer quotes faster and more consistently than the previous manual process.',
-    techStack: ['C#', '.NET', 'Azure App Service', 'CSV data lookup'],
+      'An internal quoting tool built for Clark Rubber that retrieves foam pricing and SKU data, and generates customer quotes quickly and consistently. Designed for mobile-first usage and prioritises speed and usability over visual design.',
+    techStack: ['C#', '.NET', 'Azure App Service', 'CSV Data Lookup'],
     githubUrl: 'https://github.com/CallumWilkinson/Foam_Calculator',
     liveDemoUrl: 'https://foamcalculator.azurewebsites.net/',
     engineeringNotes: [
-      'Replaced a paper-based quoting workflow with a repeatable lookup and calculation flow.',
-      'Made it easy to compare different foam options quickly so staff could handle what-if changes without rewriting a quote from scratch.',
-      'Focuses on practical business value instead of framework complexity.',
+      'Replaced a manual, paper-based quoting workflow with a repeatable lookup and calculation system.',
+      'Optimised for mobile use in-store, focusing on fast input and minimal friction rather than UI polish.',
+      'Delivers practical business value by enabling faster, more consistent quoting without adding unnecessary technical complexity.',
     ],
   },
   {
-    id: 'contract-tracker',
-    title: 'Contract Approval Workflow App',
+    id: '2d-game-speedyboi',
+    title: '2D Platformer',
     description:
-      'A small PHP backend project that models contract approval as explicit workflow rules, with strict typing and tests around status transitions.',
-    techStack: ['PHP 8', 'PHPUnit', 'PHPStan', 'Strict typing'],
-    githubUrl: 'https://github.com/CallumWilkinson/contract-tracker',
+      "This is my first project where I applied object-oriented programming in C# using Unity. You control the player using the left and right arrow keys, and jump using the space bar, with the goal of reaching the campfire to progress through each level where the game's physics become increasingly harder to control.",
+    techStack: ['Unity', 'C#', '2D game development', 'Physics tuning'],
+    githubUrl: 'https://github.com/CallumWilkinson/2D-game-speedyboi',
+    liveDemoUrl: 'https://callumwilkinson.github.io/2D-game-speedyboi/',
     engineeringNotes: [
-      'Treats workflow rules as the core of the project instead of hiding them behind controller code.',
-      'Uses tests and static analysis to lock down approval and rejection transitions in a small codebase.',
-      'Demonstrates clear domain modelling without needing a large framework or UI layer.',
+      'Applied OOP principles in a real Unity project to structure player behaviour and game systems.',
+      'Designed modular, maintainable scripts to support gameplay features and iteration.',
+      'Tuned physics and movement to create responsive controls and progressively harder levels',
     ],
   },
 ]
