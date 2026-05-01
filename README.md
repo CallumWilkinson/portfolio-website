@@ -1,53 +1,59 @@
 # Portfolio Website
 
-A fast-built portfolio website for showcasing my software projects, live demos, GitHub repositories, and the engineering decisions behind each project.
+This repository contains my interview-focused portfolio website.
 
-This project was created with the help of CLI programming agents so I could quickly get a clean portfolio up and running for interviews.
+It is a small frontend project built to present real software projects, live demos, GitHub repositories, and the engineering decisions behind each project in one clean place.
+
+## Current status
+
+The website currently includes:
+
+- A hero section with a short introduction
+- A projects section with real portfolio projects
+- An about section
+- A contact section
+- Responsive card-based project presentation for desktop and mobile
+
+The projects section is the most important part of the site.
+
+It currently highlights:
+
+- World of Warcraft Auction House Platform
+- Multiplayer Chess
+- 2D Platformer Game
+- Clark Rubber Foam Calculator
+
+Each project card is designed to show:
+
+- A short description
+- Tech stack
+- GitHub link
+- Live demo link when available
+- Screenshot or preview image when available
+- Technical details explaining what the project demonstrates
 
 ## Purpose
 
-The goal of this website is simple:
+The goal of this site is to help interviewers quickly understand:
 
-- Present my strongest projects clearly
-- Provide quick access to live demos and GitHub repositories
-- Show the technologies I have been working with
-- Give interviewers a fast way to understand what I have built
-- Keep the site clean, readable, and easy to maintain
+- What I have built
+- What technologies I have worked with
+- How I think about architecture and implementation
+- Which projects are worth exploring in more depth
 
-This is not intended to be a complex application. It is a focused portfolio site designed to communicate my work clearly.
+This is intentionally not a complex application. It is a focused portfolio site designed for clarity, speed, and interview readiness.
 
-## Why I built it this way
+## Why it is built this way
 
-I wanted to build and ship this portfolio quickly, so I used CLI programming agents as part of my workflow.
+I wanted a portfolio that could be shipped quickly without turning into an overengineered side project.
 
-The focus was on:
+The main priorities were:
 
-- Speed
 - Clear project presentation
-- Simple structure
-- Maintainable code
-- Avoiding unnecessary complexity
-
-The agents helped generate and iterate on the code, but the structure, content, and final decisions were guided by me.
-
-## Testing decision
-
-For this project, I intentionally chose not to write unit tests or integration tests.
-
-That was a deliberate trade-off.
-
-Because this is mostly a static portfolio website, I optimised for speed and interview readiness rather than automated test coverage.
-
-However, I still wanted the code to stay easy to test later if needed, so the project should favour:
-
-- Small components
-- Clear props
-- Project data separated from UI components
-- Simple conditional rendering
-- Minimal hidden side effects
-- Standalone formatting or helper functions where useful
-
-The goal was not to ignore code quality. The goal was to ship quickly while keeping the codebase in a state where tests could be added later without a major refactor.
+- Honest and specific project descriptions
+- Readable, maintainable code
+- Simple content updates through local data files
+- Practical delivery over perfect architecture
 
 ## Tech stack
 
@@ -57,99 +63,51 @@ This project uses:
 - TypeScript
 - Vite
 - Material UI
-- CSS / component styling
-- CLI programming agents for assisted development
+- Local TypeScript data files for portfolio content
 
-## Main features
+## Testing decision
 
-- Hero section with a short personal introduction
-- Project cards for key portfolio projects
-- Links to live demos
-- Links to GitHub repositories
-- About section
-- Contact section
-- Responsive layout for desktop and mobile
+I deliberately chose not to add unit tests or integration tests for this portfolio site.
 
-## Running locally
+Because this project is mostly static presentation, I prioritised speed and interview readiness over automated UI coverage.
 
-Install dependencies:
+That said, the code is still intended to stay testable later by keeping:
 
-```powershell
-npm install
-```
-
-Run the development server:
-
-```powershell
-npm run dev
-```
-
-Create a production build:
-
-```powershell
-npm run build
-```
-
-Preview the production build locally:
-
-```powershell
-npm run preview
-```
-
-## Suggested project structure
-
-```text
-src/
-  assets/
-  components/
-  data/
-  sections/
-  App.tsx
-  main.tsx
-```
-
-Suggested responsibilities:
-
-- `components/` contains reusable UI components
-- `sections/` contains page-level sections
-- `data/` contains portfolio project data
-- `assets/` contains screenshots and images
+- Components small
+- Props explicit
+- Project data separate from rendering
+- Conditional rendering simple
+- Side effects minimal
 
 ## Development principles
 
-For this project, the main development principles are:
+The codebase is intentionally simple.
 
-- Prefer readable code over clever code
-- Keep components small
+Key principles:
+
+- Keep components focused on one job
 - Keep project content easy to update
 - Avoid unnecessary dependencies
-- Avoid overengineering
-- Ship a clean version first
-- Improve polish after the core portfolio is working
+- Avoid unnecessary abstractions
+- Prefer readable code over clever code
+- Ship a clean version first, then refine
 
 ## AI-assisted workflow
 
-This project was built using CLI programming agents as a coding assistant.
+This project was built with the help of CLI programming agents as part of the implementation workflow.
 
-The workflow was:
+I used AI to move faster on scaffolding, iteration, and content presentation, but I still review the structure, decisions, and final output myself.
 
-1. Define the goal of the portfolio
-2. Break the project into a simple structure
-3. Use agents to scaffold and iterate quickly
-4. Review the generated code manually
-5. Keep the implementation simple and easy to understand
-6. Prioritise a working deployed portfolio over perfect architecture
-
-AI was used as a development accelerator, not as a replacement for understanding or reviewing the code.
+For this project, AI is a delivery accelerator, not a replacement for technical judgment.
 
 ## Interview note
 
-This repository is also an example of how I use AI-assisted development responsibly.
+This repository also reflects how I use AI-assisted development in a practical way:
 
-For a speed-focused project like this, I chose a pragmatic approach:
-
-- Use agents to move faster
+- Define a clear goal
 - Keep the scope small
-- Avoid unnecessary tests for static UI
-- Maintain readable and testable structure
-- Review and guide the final implementation myself
+- Use AI to accelerate implementation
+- Review the result carefully
+- Keep the final code understandable
+
+The portfolio itself is meant to be explainable in under a minute while still giving enough technical detail for deeper follow-up questions.
