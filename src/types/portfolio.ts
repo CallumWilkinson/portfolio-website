@@ -28,6 +28,7 @@ export interface ProfileContent {
   summary: string
   location: string
   githubUrl: string
+  linkedinUrl: string
   avatarUrl: string
   strengths: string[]
   projectsIntro: string

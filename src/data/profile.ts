@@ -7,6 +7,7 @@ export const profile: ProfileContent = {
     "I build practical software using TypeScript, JavaScript, React, and C#, including multiplayer games, data tools, and internal business apps. I focus on clean architecture, readable code, and continuous improvement through testing and iteration.",
   location: "Melbourne, VIC",
   githubUrl: "https://github.com/CallumWilkinson",
+  linkedinUrl: "https://www.linkedin.com/in/callumwilkinsondev/",
   avatarUrl: "https://avatars.githubusercontent.com/u/84135636?v=4",
   strengths: [
     "JavaScript",

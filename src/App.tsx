@@ -21,6 +21,7 @@ function App() {
         avatarUrl={profile.avatarUrl}
         githubUrl={profile.githubUrl}
         headline={profile.headline}
+        linkedinUrl={profile.linkedinUrl}
         location={profile.location}
         name={profile.name}
         strengths={profile.strengths}

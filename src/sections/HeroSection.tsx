@@ -6,6 +6,7 @@ interface HeroSectionProps {
   summary: string
   location: string
   githubUrl: string
+  linkedinUrl: string
   avatarUrl: string
   strengths: string[]
 }
@@ -16,6 +17,7 @@ function HeroSection({
   summary,
   location,
   githubUrl,
+  linkedinUrl,
   avatarUrl,
   strengths,
 }: HeroSectionProps) {
@@ -111,11 +113,33 @@ function HeroSection({
           >
             <Stack spacing={3}>
               <Stack direction="row" spacing={2} sx={{ alignItems: 'center' }}>
-                <Avatar
-                  alt={name}
-                  src={avatarUrl}
-                  sx={{ height: 72, width: 72 }}
-                />
+                <Box
+                  component="a"
+                  href={linkedinUrl}
+                  rel="noreferrer"
+                  sx={{
+                    borderRadius: '50%',
+                    display: 'inline-flex',
+                    outline: '2px solid transparent',
+                    outlineOffset: 4,
+                    transition: 'box-shadow 0.2s ease, outline-color 0.2s ease',
+                    '&:hover': {
+                      boxShadow: '0 0 0 3px rgba(15, 108, 91, 0.12)',
+                      outlineColor: 'rgba(15, 108, 91, 0.22)',
+                    },
+                    '&:focus-visible': {
+                      boxShadow: '0 0 0 3px rgba(15, 108, 91, 0.16)',
+                      outlineColor: 'rgba(15, 108, 91, 0.3)',
+                    },
+                  }}
+                  target="_blank"
+                >
+                  <Avatar
+                    alt={name}
+                    src={avatarUrl}
+                    sx={{ height: 72, width: 72 }}
+                  />
+                </Box>
                 <Stack spacing={0.5}>
                   <Typography component="p" variant="h6">
                     {name}
