@@ -24,8 +24,8 @@ export const profile: ProfileContent = {
   aboutTitle: "About",
   aboutParagraphs: [
     "I have a background in accounting and finance and started my career in the superannuation industry before transitioning into software development.",
-    "Over the past few years, I’ve built up my experience by working on complete projects across JavaScript, TypeScript, and C#, including multiplayer systems, data platforms, and internal tools.",
-    "This has developed a strong ability to work through unfamiliar problems, learn quickly, and take ownership of getting a solution working end to end.",
+    "Over the past few years, I’ve built complete projects across JavaScript, TypeScript, and C#, including multiplayer systems, data platforms, and internal tools.",
+    "This has developed my ability to quickly understand unfamiliar problems and take ownership of delivering end-to-end solutions.",
   ],
   contactTitle: "Contact",
   contactSummary:
