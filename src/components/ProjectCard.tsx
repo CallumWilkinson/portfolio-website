@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
 import {
   Box,
   Button,
@@ -7,45 +7,45 @@ import {
   Chip,
   Stack,
   Typography,
-} from '@mui/material'
+} from "@mui/material";
 
-import type { PortfolioProject } from '../types/portfolio'
+import type { PortfolioProject } from "../types/portfolio";
 
 interface ProjectCardProps {
-  project: PortfolioProject
+  project: PortfolioProject;
 }
 
-function renderFormattedDescription(description: string) {
-  const segments = description.split('**')
+function renderFormattedText(text: string) {
+  const segments = text.split("**");
 
   return segments.map((segment, index) => {
-    const key = `${index}-${segment}`
+    const key = `${index}-${segment}`;
 
     if (index % 2 === 1) {
       return (
         <Box component="strong" key={key} sx={{ fontWeight: 700 }}>
           {segment}
         </Box>
-      )
+      );
     }
 
     return (
       <Box component="span" key={key}>
         {segment}
       </Box>
-    )
-  })
+    );
+  });
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  let imageContent: ReactNode = null
+  let imageContent: ReactNode = null;
   if (project.imageUrl !== undefined) {
     imageContent = (
       <Box
         sx={{
-          borderBottom: '1px solid',
-          borderColor: 'divider',
-          overflow: 'hidden',
+          borderBottom: "1px solid",
+          borderColor: "divider",
+          overflow: "hidden",
           px: { xs: 2, md: 3 },
           pt: { xs: 2, md: 3 },
         }}
@@ -55,34 +55,34 @@ function ProjectCard({ project }: ProjectCardProps) {
           component="img"
           src={project.imageUrl}
           sx={{
-            backgroundColor: '#f4f7f6',
-            border: '1px solid',
-            borderColor: 'divider',
+            backgroundColor: "#f4f7f6",
+            border: "1px solid",
+            borderColor: "divider",
             borderRadius: 3,
-            display: 'block',
+            display: "block",
             maxHeight: 220,
-            objectFit: 'cover',
-            objectPosition: 'top',
-            width: '100%',
+            objectFit: "cover",
+            objectPosition: "top",
+            width: "100%",
           }}
         />
       </Box>
-    )
+    );
   }
 
-  let featuredChip: ReactNode = null
+  let featuredChip: ReactNode = null;
   if (project.featured === true) {
     featuredChip = (
       <Chip
         color="primary"
         label="Featured"
         size="small"
-        sx={{ alignSelf: 'flex-start', fontWeight: 700 }}
+        sx={{ alignSelf: "flex-start", fontWeight: 700 }}
       />
-    )
+    );
   }
 
-  let liveDemoButton: ReactNode = null
+  let liveDemoButton: ReactNode = null;
   if (project.liveDemoUrl !== undefined) {
     liveDemoButton = (
       <Button
@@ -95,27 +95,27 @@ function ProjectCard({ project }: ProjectCardProps) {
       >
         Live demo
       </Button>
-    )
+    );
   }
 
   return (
     <Card
       sx={{
-        backgroundColor: 'background.paper',
-        border: '1px solid',
-        borderColor: project.featured === true ? 'primary.light' : 'divider',
+        backgroundColor: "background.paper",
+        border: "1px solid",
+        borderColor: project.featured === true ? "primary.light" : "divider",
         borderRadius: 5,
-        boxShadow: 'none',
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100%',
+        boxShadow: "none",
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
       }}
     >
       {imageContent}
       <CardContent
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
+          display: "flex",
+          flexDirection: "column",
           flexGrow: 1,
           gap: 3,
           p: { xs: 3, md: 4 },
@@ -127,17 +127,17 @@ function ProjectCard({ project }: ProjectCardProps) {
             <Typography component="h3" variant="h5">
               {project.title}
             </Typography>
-            <Typography color="text.secondary" sx={{ whiteSpace: 'pre-line' }}>
-              {renderFormattedDescription(project.description)}
+            <Typography color="text.secondary" sx={{ whiteSpace: "pre-line" }}>
+              {renderFormattedText(project.description)}
             </Typography>
           </Stack>
         </Stack>
 
         <Box
           sx={{
-            alignItems: 'center',
-            display: 'flex',
-            flexWrap: 'wrap',
+            alignItems: "center",
+            display: "flex",
+            flexWrap: "wrap",
             gap: 1,
           }}
         >
@@ -147,9 +147,9 @@ function ProjectCard({ project }: ProjectCardProps) {
               label={tech}
               size="small"
               sx={{
-                backgroundColor: 'rgba(15, 108, 91, 0.08)',
+                backgroundColor: "rgba(15, 108, 91, 0.08)",
                 borderRadius: 999,
-                color: 'text.primary',
+                color: "text.primary",
                 fontWeight: 600,
               }}
             />
@@ -157,21 +157,24 @@ function ProjectCard({ project }: ProjectCardProps) {
         </Box>
 
         <Stack spacing={1.25}>
-          <Typography component="h4" sx={{ fontSize: '0.95rem', fontWeight: 800 }}>
-            Engineering value
+          <Typography
+            component="h4"
+            sx={{ fontSize: "0.95rem", fontWeight: 800 }}
+          >
+            Technical Details
           </Typography>
           <Stack
             component="ul"
             spacing={1}
             sx={{
-              color: 'text.secondary',
+              color: "text.secondary",
               m: 0,
               pl: 2.5,
             }}
           >
             {project.engineeringNotes.map((note) => (
               <Typography component="li" key={note} sx={{ pl: 0.25 }}>
-                {note}
+                {renderFormattedText(note)}
               </Typography>
             ))}
           </Stack>
@@ -179,10 +182,10 @@ function ProjectCard({ project }: ProjectCardProps) {
 
         <Box
           sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
+            display: "flex",
+            flexWrap: "wrap",
             gap: 1.5,
-            mt: 'auto',
+            mt: "auto",
           }}
         >
           <Button
@@ -199,7 +202,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         </Box>
       </CardContent>
     </Card>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;
