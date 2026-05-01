@@ -2,9 +2,9 @@ import type { ProfileContent } from "../types/portfolio";
 
 export const profile: ProfileContent = {
   name: "Callum Wilkinson",
-  headline: "Software developer building pragmatic JavaScript and C# projects.",
+  headline: "Software developer building practical full-stack projects.",
   summary:
-    "I build software that solves concrete problems, from real-time multiplayer systems to .NET data ingestion tools and practical internal apps. This portfolio focuses on work I can explain clearly in an interview, including the trade-offs behind the implementation.",
+    "I build quality software that solves clear problems, from multiplayer games to data tools and internal business apps. This portfolio highlights projects I have designed, built, debugged, and improved, with a focus on readable code and practical engineering decisions.",
   location: "Melbourne, VIC",
   githubUrl: "https://github.com/CallumWilkinson",
   avatarUrl: "https://avatars.githubusercontent.com/u/84135636?v=4",
