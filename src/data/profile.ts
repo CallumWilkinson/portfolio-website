@@ -23,13 +23,13 @@ export const profile: ProfileContent = {
     "These projects reflect how I approach building software that is clear, maintainable, and useful.",
   aboutTitle: "About",
   aboutParagraphs: [
-    "Most of my recent work sits around JavaScript, TypeScript, and C#, with a bias toward explicit control flow, small units of code, and solutions that stay understandable under change.",
-    "I like projects with a real technical problem behind them: keeping multiplayer game state authoritative, separating read and write paths in a .NET application, or turning a manual quoting process into a tool a team can actually use every day.",
-    "I also use AI coding tools pragmatically to move faster on scoped work, but I still review the structure, trade-offs, and final output myself.",
+    "I have a background in accounting and finance and started my career in the superannuation industry before transitioning into software development.",
+    "Over the past few years, I’ve built up my experience by working on complete projects across JavaScript, TypeScript, and C#, including multiplayer systems, data platforms, and internal tools.",
+    "This has developed a strong ability to work through unfamiliar problems, learn quickly, and take ownership of getting a solution working end to end.",
   ],
   contactTitle: "Contact",
   contactSummary:
-    "I am based in Melbourne, VIC and interested in software roles where clarity, maintainability, and practical delivery matter. You can contact me directly by email or mobile, or review more of my work through GitHub and LinkedIn.",
+    "I am based in Melbourne, VIC and interested in software roles where code quality, maintainability, and practical delivery matter. You can contact me directly by email or mobile, or review more of my work through GitHub and LinkedIn.",
   contactLinks: [
     {
       id: "github-profile",
