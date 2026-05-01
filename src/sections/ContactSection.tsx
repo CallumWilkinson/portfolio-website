@@ -11,6 +11,10 @@ interface ContactSectionProps {
 }
 
 function ContactSection({ title, summary, links }: ContactSectionProps) {
+  const rows = [1, 2, 3].map((row) =>
+    links.filter((link) => (link.row ?? 1) === row),
+  )
+
   return (
     <Box component="section" id="contact" sx={{ py: { xs: 8, md: 11 } }}>
       <Container maxWidth="lg">
@@ -32,16 +36,30 @@ function ContactSection({ title, summary, links }: ContactSectionProps) {
               {summary}
             </Typography>
 
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
-              {links.map((link) => (
-                <ContactLinkButton
-                  href={link.href}
-                  key={link.id}
-                  label={link.label}
-                  variant={link.variant}
-                />
-              ))}
-            </Box>
+            <Stack spacing={1.5}>
+              {rows.map((rowLinks, index) => {
+                if (rowLinks.length === 0) {
+                  return null
+                }
+
+                return (
+                  <Box
+                    key={index}
+                    sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}
+                  >
+                    {rowLinks.map((link) => (
+                      <ContactLinkButton
+                        href={link.href}
+                        key={link.id}
+                        label={link.label}
+                        tone={link.tone}
+                        variant={link.variant}
+                      />
+                    ))}
+                  </Box>
+                )
+              })}
+            </Stack>
           </Stack>
         </Box>
       </Container>

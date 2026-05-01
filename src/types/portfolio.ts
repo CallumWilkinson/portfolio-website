@@ -18,6 +18,8 @@ export interface ContactLink {
   label: string
   href: string
   variant?: ButtonProps['variant']
+  row?: number
+  tone?: 'primary' | 'default' | 'muted'
 }
 
 export interface ProfileContent {
