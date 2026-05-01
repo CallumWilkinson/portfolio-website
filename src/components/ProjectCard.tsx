@@ -15,6 +15,28 @@ interface ProjectCardProps {
   project: PortfolioProject
 }
 
+function renderFormattedDescription(description: string) {
+  const segments = description.split('**')
+
+  return segments.map((segment, index) => {
+    const key = `${index}-${segment}`
+
+    if (index % 2 === 1) {
+      return (
+        <Box component="strong" key={key} sx={{ fontWeight: 700 }}>
+          {segment}
+        </Box>
+      )
+    }
+
+    return (
+      <Box component="span" key={key}>
+        {segment}
+      </Box>
+    )
+  })
+}
+
 function ProjectCard({ project }: ProjectCardProps) {
   let imageContent: ReactNode = null
   if (project.imageUrl !== undefined) {
@@ -105,7 +127,9 @@ function ProjectCard({ project }: ProjectCardProps) {
             <Typography component="h3" variant="h5">
               {project.title}
             </Typography>
-            <Typography color="text.secondary">{project.description}</Typography>
+            <Typography color="text.secondary" sx={{ whiteSpace: 'pre-line' }}>
+              {renderFormattedDescription(project.description)}
+            </Typography>
           </Stack>
         </Stack>
 
