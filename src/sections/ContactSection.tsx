@@ -14,6 +14,8 @@ function ContactSection({ title, summary, links }: ContactSectionProps) {
   const rows = [1, 2, 3, 4].map((row) =>
     links.filter((link) => (link.row ?? 1) === row),
   );
+  const emailRow = rows[3];
+  const buttonRows = rows.slice(0, 3);
 
   return (
     <Box component="section" id="contact" sx={{ py: { xs: 8, md: 11 } }}>
@@ -37,25 +39,15 @@ function ContactSection({ title, summary, links }: ContactSectionProps) {
             </Typography>
 
             <Stack spacing={1.5}>
-              {rows.map((rowLinks, index) => {
+              {emailRow.length > 0 ? (
+                <Typography color="text.secondary" sx={{ fontSize: "0.95rem" }}>
+                  {emailRow.map((link) => link.label).join("")}
+                </Typography>
+              ) : null}
+
+              {buttonRows.map((rowLinks, index) => {
                 if (rowLinks.length === 0) {
                   return null;
-                }
-
-                if (index === 3) {
-                  const contactLine = rowLinks
-                    .map((link) => link.label)
-                    .join("");
-
-                  return (
-                    <Typography
-                      color="text.secondary"
-                      key={index}
-                      sx={{ fontSize: "0.95rem" }}
-                    >
-                      {contactLine}
-                    </Typography>
-                  );
                 }
 
                 return (
