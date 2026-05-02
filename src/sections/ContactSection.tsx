@@ -45,7 +45,7 @@ function ContactSection({ title, summary, links }: ContactSectionProps) {
                 if (index === 3) {
                   const contactLine = rowLinks
                     .map((link) => link.label)
-                    .join(" | ");
+                    .join("");
 
                   return (
                     <Typography

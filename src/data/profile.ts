@@ -54,12 +54,6 @@ export const profile: ProfileContent = {
       row: 4,
     },
     {
-      id: "mobile",
-      label: "0403 136 269",
-      href: "tel:0403136269",
-      row: 4,
-    },
-    {
       id: "portfolio-source",
       label: "Source code for this site",
       href: "https://github.com/CallumWilkinson/portfolio-website",
