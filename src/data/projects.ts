@@ -63,7 +63,7 @@ export const projects: PortfolioProject[] = [
     id: "2d-game-speedyboi",
     title: "2D Platformer Game",
     description:
-      "A **2D platformer game** built in **Unity** where the player moves through **increasingly difficult levels** and tries to reach the campfire at the end.\n\nThis was my **first project** applying **object-oriented programming in C#** inside Unity. The game is played with the **left and right arrow keys**, and the **space bar** is used to jump.",
+      "A **2D platformer game** built in **Unity** where the player moves through **increasingly difficult levels** and tries to reach the campfire at the end.\n\nThis was my **first project** applying **object-oriented programming in C#** inside Unity. The game is played with the **left and right arrow keys**, and the **space bar** is used to jump. When playing the demo you can click the **skip intro** button on the bottom right corner to jump right in.",
     techStack: ["Unity", "C#", "2D game development", "Physics tuning"],
     githubUrl: "https://github.com/CallumWilkinson/2D-game-speedyboi",
     liveDemoUrl: "https://callumwilkinson.github.io/2D-game-speedyboi/",
