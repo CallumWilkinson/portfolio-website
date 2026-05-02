@@ -5,7 +5,7 @@ export const projects: PortfolioProject[] = [
     id: "wow-paper-trader",
     title: "World of Warcraft Auction House Platform",
     description:
-      "A portfolio application that collects **World of Warcraft marketplace data** and turns it into **fast, searchable pricing information**.\n\nThe platform helps users **look up items**, **compare current prices**, and **explore auction trends** using data gathered from the **official Blizzard API**.",
+      "A portfolio application that collects **World of Warcraft marketplace data** and turns it into **fast, searchable pricing information**.\n\nThe platform helps users **look up items**, **compare current prices**, and **explore auction trends** using data gathered from the **official Blizzard API**.\n\nPlease note that this project is currently under **active development** and is not yet hosted.",
     techStack: [
       ".NET 10",
       "ASP.NET Core",
@@ -63,7 +63,7 @@ export const projects: PortfolioProject[] = [
     id: "2d-game-speedyboi",
     title: "2D Platformer Game",
     description:
-      "A **2D platformer game** built in **Unity** where the player moves through **increasingly difficult levels** and tries to reach the campfire at the end.\n\nThis was my **first project** applying **object-oriented programming in C#** inside Unity. The game is played with the **left and right arrow keys**, and the **space bar** is used to jump. When playing the demo you can click the **skip intro** button on the bottom right corner to jump right in.",
+      "A **2D platformer game** built in **Unity** where the player moves through **increasingly difficult levels** and tries to reach the campfire at the end.\n\nThis was my **first project** applying **object-oriented programming in C#** inside Unity. The game is played with the **left and right arrow keys**, and the **space bar** is used to jump.\n\nWhen playing the demo you can click the **skip intro** button on the bottom right corner to jump right in.",
     techStack: ["Unity", "C#", "2D game development", "Physics tuning"],
     githubUrl: "https://github.com/CallumWilkinson/2D-game-speedyboi",
     liveDemoUrl: "https://callumwilkinson.github.io/2D-game-speedyboi/",
