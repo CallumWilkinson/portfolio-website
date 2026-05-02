@@ -5,7 +5,7 @@ export const projects: PortfolioProject[] = [
     id: "wow-paper-trader",
     title: "World of Warcraft Auction House Platform",
     description:
-      "A portfolio application that collects **World of Warcraft marketplace data** and turns it into **fast, searchable pricing information**.\n\nThe platform helps users **look up items**, **compare current prices**, and **explore auction trends** using data gathered from the **official Blizzard API**.\n\nPlease note that this project is currently under **active development** and is not yet hosted.",
+      "A portfolio application that collects **World of Warcraft marketplace data** and turns it into **fast, searchable pricing information**.\n\nThe platform helps users **look up items**, **compare current prices**, and **explore auction trends** using data gathered from the **official Blizzard API**.\n\nPlease note that this project is currently under **active development** and does not yet have an online demo.",
     techStack: [
       ".NET 10",
       "ASP.NET Core",
