@@ -40,6 +40,9 @@ function renderFormattedText(text: string) {
 function ProjectCard({ project }: ProjectCardProps) {
   let imageContent: ReactNode = null;
   if (project.imageUrl !== undefined) {
+    const imageLinkUrl =
+      project.liveDemoUrl !== undefined ? project.liveDemoUrl : project.githubUrl;
+
     const imageElement = (
       <Box
         alt={project.imageAlt}
@@ -63,11 +66,11 @@ function ProjectCard({ project }: ProjectCardProps) {
 
     let linkedImageContent = imageElement;
 
-    if (project.liveDemoUrl !== undefined) {
+    if (imageLinkUrl !== undefined) {
       linkedImageContent = (
         <Box
           component="a"
-          href={project.liveDemoUrl}
+          href={imageLinkUrl}
           rel="noreferrer"
           sx={{
             borderRadius: 3,
