@@ -5,7 +5,7 @@ export const projects: PortfolioProject[] = [
     id: "wow-paper-trader",
     title: "World of Warcraft Auction House Platform",
     description:
-      "A portfolio application that collects **World of Warcraft marketplace data** and turns it into **fast, searchable pricing information**.\n\nThe platform helps users **look up items**, **compare current prices**, and **explore auction trends** using data gathered from the **official Blizzard API**.\n\nPlease note that this project is currently under **active development**, with the online demo planned for a later release.",
+      "A data platform that collects **World of Warcraft marketplace data** and turns it into **fast, searchable pricing information**.\n\nThe platform helps users **look up items**, **compare current prices**, and **explore auction trends** using data gathered from the **official Blizzard API**.\n\nPlease note that this project is currently under **active development**, with the online demo planned for a later release.",
     techStack: [
       ".NET 10",
       "ASP.NET Core",
@@ -34,7 +34,7 @@ export const projects: PortfolioProject[] = [
     id: "chess-cs50-v2",
     title: "Multiplayer Chess",
     description:
-      "An **online multiplayer chess project** that allows two players to join the same game lobby and keep both boards **synchronised in real time**.\n\nTo try the demo, open **two browser tabs** to simulate two players. **Create a game** in the first tab, then **join that same lobby** from the second tab. You can play against yourself and watch both boards stay in sync.\n\nMoves are currently made by **clicking a piece**, then **clicking the destination square**. **Drag-and-drop movement has not been implemented yet.**",
+      "An **online multiplayer chess project** that allows two players to join the same game lobby and keep both boards **synchronised in real time**.\n\nTo try the demo, open **two browser tabs** to simulate two players. **Create a game** in the first tab, then **join that same lobby** from the second tab. You can play against yourself and watch both boards stay in sync.\n\nMoves are currently made by **clicking a piece**, then **clicking the destination square**. Drag-and-drop movement has **not been implemented yet.**",
     techStack: [
       "Vanilla JavaScript",
       "Node.js",
@@ -63,7 +63,7 @@ export const projects: PortfolioProject[] = [
     id: "2d-game-speedyboi",
     title: "2D Platformer Game",
     description:
-      "A **2D platformer game** built in **Unity** where the player moves through **increasingly difficult levels** and tries to reach the campfire at the end.\n\nThis was my **first project** applying **object-oriented programming in C#** inside Unity. The game is played with the **left and right arrow keys**, and the **space bar** is used to jump.\n\nWhen playing the demo, you can click the “Skip Intro” button in the bottom-right corner to jump straight in.",
+      "A **2D platformer game** built in **Unity** where the player moves through **increasingly difficult levels** and tries to reach the campfire at the end.\n\nThis was my **first project** applying **object-oriented programming in C#** inside Unity. The game is played with the **left and right arrow keys**, and the **space bar** is used to jump.\n\nWhen playing the demo, you can click the **“Skip Intro”** button in the bottom-right corner to jump straight in.",
     techStack: ["Unity", "C#", "2D game development", "Physics tuning"],
     githubUrl: "https://github.com/CallumWilkinson/2D-game-speedyboi",
     liveDemoUrl: "https://callumwilkinson.github.io/2D-game-speedyboi/",
