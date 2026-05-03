@@ -4,7 +4,7 @@ export const profile: ProfileContent = {
   name: "Callum Wilkinson",
   headline: "Software developer building practical full-stack software",
   summary:
-    "I build practical software using TypeScript, JavaScript, React, and C#, across multiplayer gaming systems, data platforms, and internal business tools. I focus on clean architecture, readable code, and continuous improvement through testing and iteration.",
+    "I build practical software using TypeScript, JavaScript, React, and C#, across multiplayer systems, data platforms, and internal business tools. I focus on clean architecture, readable code, and continuous improvement through testing and iteration.",
   location: "Melbourne, VIC",
   githubUrl: "https://github.com/CallumWilkinson",
   linkedinUrl: "https://www.linkedin.com/in/callumwilkinsondev/",
@@ -15,7 +15,7 @@ export const profile: ProfileContent = {
     "React",
     "C#",
     ".NET",
-    "Test-Driven-Development",
+    "Test-Driven Development",
     "Software Architecture",
     "AI with Quality",
   ],
@@ -29,7 +29,7 @@ export const profile: ProfileContent = {
   ],
   contactTitle: "Contact",
   contactSummary:
-    "I am based in Melbourne, VIC and interested in software roles where code quality, maintainability, and practical delivery matter. You can contact me by email or mobile, or explore more of my work on GitHub and LinkedIn.",
+    "I am based in Melbourne, VIC, and interested in software roles where code quality, maintainability, and practical delivery matter. You can contact me by email or mobile, or explore more of my work on GitHub and LinkedIn.",
   contactLinks: [
     {
       id: "github-profile",
