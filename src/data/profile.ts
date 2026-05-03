@@ -2,7 +2,7 @@ import type { ProfileContent } from "../types/portfolio";
 
 export const profile: ProfileContent = {
   name: "Callum Wilkinson",
-  headline: "Software developer building practical full-stack systems",
+  headline: "Software developer building practical full-stack projects",
   summary:
     "I build practical software using TypeScript, JavaScript, React, and C#, across multiplayer systems, data platforms, and internal business tools. I focus on clean architecture, readable code, and continuous improvement through testing and iteration.",
   location: "Melbourne, VIC",
@@ -17,7 +17,7 @@ export const profile: ProfileContent = {
     ".NET",
     "Test-Driven Development",
     "Software Architecture",
-    "AI with Quality",
+    "Responsible AI Use",
   ],
   projectsIntro:
     "These projects reflect how I approach building software that is clear, maintainable, and useful.",
