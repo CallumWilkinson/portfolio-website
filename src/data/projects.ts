@@ -12,7 +12,7 @@ export const projects: PortfolioProject[] = [
       "C#",
       "Dapper",
       "SQL Server",
-      "Typescript React",
+      "TypeScript React",
       "API Integration",
     ],
     githubUrl: "https://github.com/CallumWilkinson/wow-paper-trader",
@@ -63,7 +63,7 @@ export const projects: PortfolioProject[] = [
     id: "2d-game-speedyboi",
     title: "2D Platformer Game",
     description:
-      "A **2D platformer game** built in **Unity** where the player moves through **increasingly difficult levels** and tries to reach the campfire at the end.\n\nThis was my **first project** applying **object-oriented programming in C#** inside Unity. The game is played with the **left and right arrow keys**, and the **space bar** is used to jump.\n\nWhen playing the demo you can click the **skip intro** button on the bottom right corner to jump right in.",
+      "A **2D platformer game** built in **Unity** where the player moves through **increasingly difficult levels** and tries to reach the campfire at the end.\n\nThis was my **first project** applying **object-oriented programming in C#** inside Unity. The game is played with the **left and right arrow keys**, and the **space bar** is used to jump.\n\nWhen playing the demo, you can click the “Skip Intro” button in the bottom-right corner to jump straight in.",
     techStack: ["Unity", "C#", "2D game development", "Physics tuning"],
     githubUrl: "https://github.com/CallumWilkinson/2D-game-speedyboi",
     liveDemoUrl: "https://callumwilkinson.github.io/2D-game-speedyboi/",
@@ -81,9 +81,9 @@ export const projects: PortfolioProject[] = [
   },
   {
     id: "foam-calculator",
-    title: "Cark Rubber Foam Calculator",
+    title: "Clark Rubber Quoting Tool",
     description:
-      "A **mobile-first quoting tool** built for **Clark Rubber staff** to calculate foam product prices **faster and more consistently**.\n\nThe project is designed for **practical in-store use**, not visual polish. Its main goal is to replace a **slower manual quoting process** with a simple tool that helps staff find prices and prepare customer quotes quickly.",
+      "A **mobile-first quoting tool** built for **Clark Rubber staff** to calculate foam product prices **faster and more consistently**.\n\nThe project is designed for **practical in-store use** rather than visual polish. Its main goal is to replace a **slower manual quoting process** with a simple tool that helps staff find prices and prepare customer quotes quickly.",
     techStack: ["C#", ".NET", "Azure App Service", "CSV Data Lookup"],
     githubUrl: "https://github.com/CallumWilkinson/Foam_Calculator",
     liveDemoUrl: "https://foamcalculator.azurewebsites.net/",

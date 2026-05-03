@@ -2,9 +2,9 @@ import type { ProfileContent } from "../types/portfolio";
 
 export const profile: ProfileContent = {
   name: "Callum Wilkinson",
-  headline: "Software developer building practical full-stack projects",
+  headline: "Software developer building practical full-stack systems",
   summary:
-    "I build practical software using TypeScript, JavaScript, React, and C#, including multiplayer games, data tools, and internal business apps. I focus on clean architecture, readable code, and continuous improvement through testing and iteration.",
+    "I build practical software using TypeScript, JavaScript, React, and C#, across multiplayer gaming systems, data platforms, and internal business tools. I focus on clean architecture, readable code, and continuous improvement through testing and iteration.",
   location: "Melbourne, VIC",
   githubUrl: "https://github.com/CallumWilkinson",
   linkedinUrl: "https://www.linkedin.com/in/callumwilkinsondev/",
@@ -24,12 +24,12 @@ export const profile: ProfileContent = {
   aboutTitle: "About",
   aboutParagraphs: [
     "I have a background in accounting and finance and started my career in the superannuation industry before transitioning into software development.",
-    "Over the past few years, I’ve built complete projects across JavaScript, TypeScript, and C#, including multiplayer systems, data platforms, and internal tools.",
-    "This has developed my ability to quickly understand unfamiliar problems and take ownership of delivering end-to-end solutions.",
+    "Over the past few years, I’ve built end-to-end projects across JavaScript, TypeScript, and C#, including multiplayer systems, data platforms, and internal tools.",
+    "This has strengthened my ability to quickly understand unfamiliar problems and take ownership of delivering end-to-end solutions.",
   ],
   contactTitle: "Contact",
   contactSummary:
-    "I am based in Melbourne, VIC and interested in software roles where code quality, maintainability, and practical delivery matter. You can contact me directly by email or mobile, or review more of my work through GitHub and LinkedIn.",
+    "I am based in Melbourne, VIC and interested in software roles where code quality, maintainability, and practical delivery matter. You can contact me by email or mobile, or explore more of my work on GitHub and LinkedIn.",
   contactLinks: [
     {
       id: "github-profile",
