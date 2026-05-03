@@ -10,7 +10,6 @@ export const profile: ProfileContent = {
   linkedinUrl: "https://www.linkedin.com/in/callumwilkinsondev/",
   avatarUrl: "https://avatars.githubusercontent.com/u/84135636?v=4",
   strengths: [
-    "JavaScript",
     "TypeScript",
     "React",
     "C#",
