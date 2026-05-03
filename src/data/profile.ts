@@ -11,6 +11,7 @@ export const profile: ProfileContent = {
   avatarUrl: "https://avatars.githubusercontent.com/u/84135636?v=4",
   strengths: [
     "TypeScript",
+    "JavaScript",
     "React",
     "C#",
     ".NET",
