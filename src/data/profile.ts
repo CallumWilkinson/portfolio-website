@@ -29,7 +29,7 @@ export const profile: ProfileContent = {
   ],
   contactTitle: "Contact",
   contactSummary:
-    "I am based in Melbourne, VIC, and interested in software roles where code quality, maintainability, and practical delivery matter. You can contact me by email or mobile, or explore more of my work on GitHub and LinkedIn.",
+    "I am based in Melbourne, VIC, and interested in junior software roles where code quality, maintainability, and practical delivery matter. You can contact me by email or mobile, or explore more of my work on GitHub and LinkedIn.",
   contactLinks: [
     {
       id: "github-profile",
