@@ -4,6 +4,10 @@ This repository contains my interview-focused portfolio website.
 
 It is a small frontend project built to present real software projects, live demos, GitHub repositories, and the engineering decisions behind each project in one clean place.
 
+## App Screenshot
+
+![Landing Page](portfolio-demo.png)
+
 ## Current status
 
 The website currently includes:
