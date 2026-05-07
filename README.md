@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This repository contains my interview-focused portfolio website.
+This repository contains my portfolio website.
 
 It is a small frontend project built to present real software projects, live demos, GitHub repositories, and the engineering decisions behind each project in one clean place.
 
