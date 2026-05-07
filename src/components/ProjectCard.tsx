@@ -122,7 +122,9 @@ function ProjectCard({ project }: ProjectCardProps) {
   if (project.featured === true) {
     featuredChip = (
       <Chip
+        clickable={false}
         color="primary"
+        component="div"
         label="Featured"
         size="small"
         sx={{ alignSelf: "flex-start", fontWeight: 700 }}
@@ -191,6 +193,8 @@ function ProjectCard({ project }: ProjectCardProps) {
         >
           {project.techStack.map((tech) => (
             <Chip
+              clickable={false}
+              component="div"
               key={tech}
               label={tech}
               size="small"

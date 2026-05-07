@@ -155,6 +155,8 @@ function HeroSection({
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                   {strengths.map((strength) => (
                     <Chip
+                      clickable={false}
+                      component="div"
                       key={strength}
                       label={strength}
                       sx={{
