@@ -26,6 +26,7 @@ function App() {
         name={profile.name}
         strengths={profile.strengths}
         summary={profile.summary}
+        summaryNote={profile.summaryNote}
       />
       <ProjectsSection intro={profile.projectsIntro} projects={projects} />
       <AboutSection

@@ -26,6 +26,7 @@ export interface ProfileContent {
   name: string
   headline: string
   summary: string
+  summaryNote?: string
   location: string
   githubUrl: string
   linkedinUrl: string

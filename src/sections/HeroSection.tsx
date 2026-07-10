@@ -4,6 +4,7 @@ interface HeroSectionProps {
   name: string
   headline: string
   summary: string
+  summaryNote?: string
   location: string
   githubUrl: string
   linkedinUrl: string
@@ -15,6 +16,7 @@ function HeroSection({
   name,
   headline,
   summary,
+  summaryNote,
   location,
   githubUrl,
   linkedinUrl,
@@ -83,6 +85,21 @@ function HeroSection({
             >
               {summary}
             </Typography>
+
+            {summaryNote !== undefined && (
+              <Typography
+                color="text.secondary"
+                sx={{
+                  borderLeft: '3px solid',
+                  borderColor: 'primary.main',
+                  fontSize: { xs: '0.98rem', md: '1.05rem' },
+                  maxWidth: 740,
+                  pl: 2,
+                }}
+              >
+                {summaryNote}
+              </Typography>
+            )}
 
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
               <Button href="#projects" size="large" variant="contained">

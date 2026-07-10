@@ -5,6 +5,8 @@ export const profile: ProfileContent = {
   headline: "Software developer building practical full-stack projects",
   summary:
     "I build practical software using TypeScript, JavaScript, React, and C#, across multiplayer systems, data platforms, and internal business tools. I focus on clean architecture, readable code, and continuous improvement through testing and iteration.",
+  summaryNote:
+    "Please note - as of July 2026 demos of my projects below will be temporarily unavailable as I am currently building my own self hosted cloud server and migrating the deployments across to save on Azure & AWS costs.",
   location: "Melbourne, VIC",
   githubUrl: "https://github.com/CallumWilkinson",
   linkedinUrl: "https://www.linkedin.com/in/callumwilkinsondev/",
